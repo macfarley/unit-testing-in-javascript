@@ -18,8 +18,22 @@ function validatePhoneNumber(phoneNumber) {
   return re.test(phoneNumber);
 }
 
+// Validate Username
+function validateUsername(username){
+  //return false if username not a string
+  if(typeof username !== 'string'){
+    return false
+  }
+//return false if username too short
+  if(username.length < 3){
+    return false
+  }
+  return true
+}
+
 module.exports = {
   validateEmail,
   validatePassword,
   validatePhoneNumber,
+  validateUsername
 };
